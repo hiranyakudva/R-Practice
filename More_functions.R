@@ -58,3 +58,8 @@ mtcars$name[which.max(mtcars$mpg)]
 
 # 'replicate' : Repeated evaluation of an expression 
 replicate(5, mtcars$mpg)
+
+# 'rank' : Returns the sample ranks of the values in a vector
+rank(mtcars$mpg, ties.method = 'first') # ascending
+rank(-mtcars$mpg, ties.method = 'first') # descending
+rank(mtcars$name)
