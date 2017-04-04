@@ -47,6 +47,10 @@ cyl_mpg <- tapply(df$mpg, df$cyl, mean) # I am trying to find the average milage
 
 # I can create a new variable with values for average milage for each entry of cyl
 df['cyl_mpg'] <- cyl_mpg[as.character(df$cyl)] # need to convert cyl into string
+	
+# Using tapply to mimic apply function
+df$ones <- 1
+tapply(df$hp, df$ones, mean)
 
 # 'mapply' : Apply function to first elements of each ... argument, the second elements, the third elements, and so on
 # Usage : maaply(Function, Arg1, Arg2, ....)
