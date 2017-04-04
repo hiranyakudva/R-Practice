@@ -63,3 +63,7 @@ replicate(5, mtcars$mpg)
 rank(mtcars$mpg, ties.method = 'first') # ascending
 rank(-mtcars$mpg, ties.method = 'first') # descending
 rank(mtcars$name)
+
+# 'order' : Sort data by specific columns
+mtcars[order(mpg, cyl),] # Sort dataframe by mpg and cyl
+mtcars[order(mpg, -cyl),] # Sort by mpg (ascending) and cyl (descending)
